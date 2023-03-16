@@ -1,0 +1,72 @@
+// .aboutCollapse{
+// display: flex;
+// justify-content: center;
+// }
+.collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  &__dropdown {
+    width: 100%;
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 1em;
+      width: 80%;
+      background-color: $primary-color;
+      margin: 0 auto;
+      margin-top: 1.5em;
+      border-radius: 5px;
+      h2 {
+        color: $tertiary-color;
+        // font-size: 1.8rem;
+        @include font(24px, 500);
+      }
+      p {
+        color: $tertiary-color;
+        // font-size: 2.2rem;
+      }
+    }
+    &__content {
+      background-color: $secondary-color;
+      width: 80%;
+      margin-left: 10%;
+      border-radius: 5px;
+      p {
+        @include font(20px, 400);
+        color: $primary-color;
+        margin: 0 auto;
+        padding: 0.8em;
+      }
+    }
+  }
+}
+
+// .collapse{
+//    display: flex;
+//   width: 100%;
+// 	margin: 20px 0;
+//    justify-content: center;
+//    align-items: center;
+// }
+// .accordion {
+//     width: 500px;
+// }
+// .item {
+//     background: #f0ebf0;
+//     margin-bottom: 5px;
+//     padding: 10px 20px;
+// }
+// .title {
+//     color: #856685;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+// .content{
+//     color: #8b7f75;
+
+// }
