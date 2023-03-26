@@ -8,10 +8,12 @@ import Header from "../../components/header/Header";
 const Home = () => {
   return (
     <div className="home">
-      <Header />
-      <Banner />
-      <Gallery />
-      <Footer />
+      <main>
+        <Header />
+        <Banner />
+        <Gallery />
+        <Footer />
+      </main>
     </div>
   );
 };
