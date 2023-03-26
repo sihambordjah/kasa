@@ -44,7 +44,15 @@
     }
   }
 }
+.description-equipements {
+  @include flex-column;
+  width: 100%;
 
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    gap: 1%;
+  }
+}
 // .collapse{
 //    display: flex;
 //   width: 100%;

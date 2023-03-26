@@ -1,12 +1,24 @@
-//Style globale
-// @import "../utils/variables";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 body {
-  font-family: 'Montserrat';
+  @include body-position;
+
+
+	@media (min-width: $breakpoint-desktop) {
+		max-width: 100%;
+	}
+}
+main {
+	margin: 5%;
+
+	@media screen and (min-width: $breakpoint-desktop) {
+		margin: 0 100px;
+	}
 }
 li {
   list-style-type: none;

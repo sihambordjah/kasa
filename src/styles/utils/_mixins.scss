@@ -42,11 +42,11 @@
   justify-content: center;
 }
 
-// @mixin flex-column {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-// }
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 @mixin flex-end {
   display: flex;
@@ -73,12 +73,14 @@
 @mixin rightArrow-style {
   display: flex;
   position: absolute;
+  font-size: 4.5rem;
   top: 47%;
   right: 2%;
   width: 12px;
   height: 20px;
   z-index: 10;
   cursor: pointer;
+  color: $tertiary-color;
 
   @media screen and (min-width: $breakpoint-desktop) {
     width: 47px;
@@ -90,12 +92,14 @@
 @mixin leftArrow-style {
   display: flex;
   position: absolute;
+  font-size: 4.5rem;
   top: 47%;
   left: 2%;
-  width: 12px;
-  height: 20px;
+height: 79px;
+width: 46px;
   z-index: 10;
   cursor: pointer;
+  color: $tertiary-color;
 
   @media screen and (min-width: $breakpoint-desktop) {
     width: 47px;

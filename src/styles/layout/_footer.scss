@@ -3,6 +3,7 @@
   gap: 50px;
   width: 100%;
   height: 209px;
+  margin: 4% 0 3% 0;
   background-color: $footer-color;
   &__logo {
     // margin-top: 2%;
@@ -14,10 +15,9 @@
     @extend %flex-end;
     color: $tertiary-color;
     width: 100%;
-    // margin: 4% 0 3% 0;
-
-    // @media screen and (min-width: $breakpoint-desktop) {
-    //   @include font(24px, 500);
-    // }
+   
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include font(24px, 500);
+    }
   }
 }
