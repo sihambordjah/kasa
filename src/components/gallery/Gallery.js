@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logements from "../../datas/logement.json";
 import Card from "../cards/Card";
 
@@ -9,9 +9,9 @@ const Gallery = () => {
       {logements.map((logement) => {
         return (
           <article key={logement.id}>
-            <NavLink to={`/logement/${logement.id}`}>
+            <Link to={`/logement/${logement.id}`}>
               <Card image={logement.cover} title={logement.title} />
-            </NavLink>
+            </Link>
           </article>
         );
       })}
