@@ -7,7 +7,7 @@ const Accordion = ({ title, content }) => {
   };
 
   return (
-    <>
+    <div className="collapse__dropdown__container">
       <div className="collapse__dropdown__title">
         <h2>{title}</h2>
         <p onClick={display}>
@@ -21,7 +21,7 @@ const Accordion = ({ title, content }) => {
       <div className="collapse__dropdown__content">
         {text && <p>{content}</p>}
       </div>
-    </>
+    </div>
   );
 };
 
