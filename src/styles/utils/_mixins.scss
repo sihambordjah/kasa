@@ -5,8 +5,8 @@
   margin: auto;
 }
 
-@mixin boxShadow {
-  box-shadow: rgba(255, 96, 96, 0.9) 0 0 22px 6px;
+@mixin linear-gradient {
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%, #00000080);
 }
 
 @mixin WH-full {
@@ -43,10 +43,16 @@
 }
 
 @mixin flex-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+// @mixin flex-rowCenter {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 @mixin flex-end {
   display: flex;
@@ -62,19 +68,11 @@
   margin-top: 20px;
 }
 
-// @mixin small-radius {
-//     border-radius: 10px;
-// }
-
-// @mixin big-radius {
-//   border-radius: 25px;
-// }
-
 @mixin rightArrow-style {
   display: flex;
   position: absolute;
-  font-size: 4.5rem;
-  top: 47%;
+  font-size: 1.5rem;
+  top: 42%;
   right: 2%;
   width: 12px;
   height: 20px;
@@ -86,17 +84,18 @@
     width: 47px;
     height: 79px;
     top: 42%;
+    font-size: 4.5rem;
   }
 }
 
 @mixin leftArrow-style {
   display: flex;
   position: absolute;
-  font-size: 4.5rem;
-  top: 47%;
+  font-size: 1.5rem;
+  top: 42%;
   left: 2%;
-height: 79px;
-width: 46px;
+  height: 20px;
+  width: 12px;
   z-index: 10;
   cursor: pointer;
   color: $tertiary-color;
@@ -105,8 +104,10 @@ width: 46px;
     width: 47px;
     height: 79px;
     top: 42%;
+    font-size: 4.5rem;
   }
 }
+
 @mixin media-query($key) {
   $size: map-get($breakpoints, $key);
   @media only screen and (min-width: $size) {
