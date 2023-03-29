@@ -53,23 +53,28 @@ const FicheLogementDisplay = () => {
       return <li key={index}>{equipment}</li>;
     }
   );
-  //   const [data, setData] = useState()
+
   return (
     <>
       {ficheLogement ? (
         <div className="Fiche-container">
           <Carrousel slides={ficheLogement.pictures} />
           <section className="Fiche-logement">
-            <div className="description-informations">
-              <div className="Fiche-logement__info">
-                <span className="titre-logement">{ficheLogement.title}</span>
-                <span className="endroit-logement">
-                  {ficheLogement?.location}
-                </span>
-                <div className="tags">{tagsLogement}</div>
+            <div className="description-info">
+              <div className="description-info__titletags">
+                <div className="description-info__titletags__title">
+                  <span className="titre-logement">{ficheLogement.title}</span>
+                  <span className="endroit-logement">
+                    {ficheLogement?.location}
+                  </span>
+                </div>
+                <div className="description-info__titletags__tags">
+                  {tagsLogement}
+                </div>
               </div>
-              <div className="Fiche-logement__proprietaire">
-                <div className="Fiche-logement__proprietaire__info">
+
+              <div className="description-info__proprietaire">
+                <div className="description-info__proprietaire__nom-prop">
                   <span className="nom-proprietaire">
                     {ficheLogement?.host.name}
                   </span>
@@ -79,21 +84,24 @@ const FicheLogementDisplay = () => {
                     alt="Propriétaire"
                   />
                 </div>
-                <div className="Fiche-logement__proprietaire__rate">
+                <div className="description-info__proprietaire__rate">
                   {noteLogement}
                 </div>
               </div>
             </div>
+          </section>
 
-            <div className="description-equipements">
+          <div className="description-centent">
+            <div className="description-centent__description">
               <Collapse
                 title="Description"
                 content={ficheLogement?.description}
               />
-
+            </div>
+            <div className="description-centent__equipement">
               <Collapse title="Équipements" content={equipementsLogement} />
             </div>
-          </section>
+          </div>
         </div>
       ) : (
         <Navigate replace to="/404" />
