@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/https//sihambordjah.github.io/kasa/static/css/main.7fc1bdc9.css",
+    "main.js": "/https//sihambordjah.github.io/kasa/static/js/main.02e26859.js",
+    "static/media/aboutBanner.png": "/https//sihambordjah.github.io/kasa/static/media/aboutBanner.d9590614febb1cea1483.png",
+    "static/media/homeBanner.png": "/https//sihambordjah.github.io/kasa/static/media/homeBanner.4c36aadaecae8cfa7756.png",
+    "static/media/backgroundbannermobile.png": "/https//sihambordjah.github.io/kasa/static/media/backgroundbannermobile.694458a947bd702b7b9a.png",
+    "static/media/LOGO.svg": "/https//sihambordjah.github.io/kasa/static/media/LOGO.a6101328193bb3191cbcb50c120ec0d1.svg",
+    "index.html": "/https//sihambordjah.github.io/kasa/index.html",
+    "main.7fc1bdc9.css.map": "/https//sihambordjah.github.io/kasa/static/css/main.7fc1bdc9.css.map",
+    "main.02e26859.js.map": "/https//sihambordjah.github.io/kasa/static/js/main.02e26859.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fc1bdc9.css",
+    "static/js/main.02e26859.js"
+  ]
+}
