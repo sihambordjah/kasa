@@ -5,13 +5,14 @@ import Header from "../../components/header/Header";
 
 const FichLogment = () => {
   return (
-    <main>
-      <div className="logement">
-        <Header />
+    <div className="logement">
+      <Header />
+      <main>
         <FicheLogementDisplay />
-        <Footer />
-      </div>
-    </main>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 
