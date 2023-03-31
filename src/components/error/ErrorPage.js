@@ -7,7 +7,7 @@ export default function NoPage() {
         <p className="errorContainer__Text">
           Oups! La page que vous demandez n'existe pas.
         </p>
-        <NavLink to="/" className="errorContainer__errorLink">
+        <NavLink to="/" className="errorContainer__Link">
           Retourner sur la page d'accueil
         </NavLink>
       </div>
