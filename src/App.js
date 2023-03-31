@@ -7,7 +7,7 @@ import NoPage from "./pages/error/NoPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kasa" >
       <Routes>
         <Route element={<Navigate replace to="/accueil" />} path="/" />
         <Route path="/accueil" element={<Home />} />
