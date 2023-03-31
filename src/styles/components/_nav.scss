@@ -6,8 +6,8 @@
     text-transform: none;
   }
 
-  // &__link-home,
-  &__nav-link {
+   &__nav-link-home,
+  &__nav-link-about {
     @include font-right(12px);
     color: $primary-color;
     text-decoration: none;
@@ -15,7 +15,7 @@
 
     @media screen and (min-width: $breakpoint-desktop) {
       @include font-right(24px);
-      padding-left: 4rem;
+      padding-left: 3.5rem;
     }
 
     &:hover,

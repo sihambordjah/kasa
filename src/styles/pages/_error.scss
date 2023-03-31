@@ -1,23 +1,23 @@
-.errorContainer {
-  color: $primary-color;
-  margin: 0;
-  @extend %flex-column;
-  &__Number {
-    @include font(20rem, 700);
-//   font-size: 22rem;
-//   font-weight: 700;
-  margin: 12rem 0 1rem 0;
-}
-&__Text {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 11% 20% 11%;
-}
-// .flexCenter {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
+// .errorContainer {
+//   color: $primary-color;
+//   margin: 0;
+//   @extend %flex-column;
+//   &__Number {
+//     @include font(20rem, 700);
+// //   font-size: 22rem;
+// //   font-weight: 700;
+//   margin: 12rem 0 1rem 0;
 // }
-}
+// &__Text {
+//   font-size: 20px;
+//   font-weight: 700;
+//   margin: 0 11% 20% 11%;
+// }
+// // .flexCenter {
+// //   display: flex;
+// //   align-items: center;
+// //   justify-content: center;
+// //   flex-direction: column;
+// // }
+// }
 
