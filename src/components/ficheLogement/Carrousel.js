@@ -22,23 +22,11 @@ function Carrousel({ slides }) {
   return (
     <section className="slide">
       {length > 1 && (
-        // <img
-        //   src={flechLeft}
-        //   alt="left"
-        //   onClick={prevImg}
-        //   className="left-Arrow"
-        // />
         <p className="left-Arrow" onClick={prevImg}>
           <i className="fa-solid fa-chevron-left"></i>
         </p>
       )}
       {length > 1 && (
-        // <img
-        //   src={flechRight}
-        //   alt="right"
-        //   onClick={nextImg}
-        //   className="right-Arrow"
-        // />
         <p className="right-Arrow" onClick={nextImg}>
           <i className="fa-solid fa-chevron-right"></i>
         </p>
