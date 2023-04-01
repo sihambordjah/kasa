@@ -31,3 +31,9 @@ HTML5 / CSS3 / SASS / JavaScript / React
 ### Informations complémentaires
 * Visiter le site web :  https://sihambordjah.github.io/kasa/
 * Soutenance validé le : ?/?/?
+
+----------------------
+# Installation
+
+## Premiers pas avec l'application Create React
+Ce projet a été lancé avec [Create React App](https://github.com/facebook/create-react-app)
