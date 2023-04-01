@@ -8,7 +8,7 @@ import NoPage from "./pages/error/NoPage";
 const App = () => {
   return (
     <HashRouter>
-      <Routes>
+       <Routes>
         <Route element={<Navigate replace to="/accueil" />} path="/" />
         <Route path="/accueil" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -16,6 +16,8 @@ const App = () => {
         <Route path="*" element={<NoPage />} />
       </Routes>
     </HashRouter>
+     
+   
   );
 };
 
