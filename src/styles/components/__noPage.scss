@@ -13,31 +13,32 @@
       margin: 0;
     }
   }
-    &__Text {
-      @extend %flex-end;
-      text-align: center;
+  &__Text {
+    @extend %flex-end;
+    text-align: center;
+    @include font(18px, 500);
+    margin: 0 11%;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      @include font(36px, 500);
+      margin: 0;
+    }
+  }
+  &__Link {
+    @extend %flex-end;
+    //text-decoration: none;
+    color: $primary-color;
+    @include font(14px, 500);
+    margin: 3rem 0 2rem 0;
+
+    @media screen and (min-width: $breakpoint-desktop) {
       @include font(18px, 500);
-      margin: 0 11%;
-
-      @media screen and (min-width: $breakpoint-desktop) {
-        @include font(36px, 500);
-        margin: 0;
-      }
+      margin-top: 7rem;
     }
-    &__Link {
-      @extend %flex-end;
-      text-decoration: none;
-      color: $primary-color;
-      @include font(14px, 500);
-      margin-top: 9rem;
 
-      @media screen and (min-width: $breakpoint-desktop) {
-        @include font(18px, 500);
-      }
-
-      &:hover,
-      &:focus {
-        text-decoration-line: underline;
-      }
+    &:hover,
+    &:focus {
+      text-decoration-line: underline;
     }
+  }
 }
