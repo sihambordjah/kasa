@@ -10,8 +10,8 @@ const App = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Navigate replace to="/accueil" />} />
-        <Route path="accueil" element={<Home />} />
+        <Route path="" element={<Navigate />} />
+        <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="logement/:id" element={<FichLogement />} />
         <Route path="*" element={<NoPage />} />
