@@ -1,15 +1,10 @@
-// .aboutCollapse{
-// display: flex;
-// justify-content: center;
-// }
+
 .collapse {
   display: flex;
   width: 100%;
   margin: 20px 0;
   justify-content: center;
   align-items: center;
-  // margin-top: 3em;
-  // margin-bottom: 3em;
   &__dropdown {
     width: 100%;
 
@@ -36,6 +31,9 @@
       }
       p {
         color: $tertiary-color;
+         i{
+          cursor: pointer;
+         }
       }
     }
     &__content {
@@ -59,28 +57,4 @@
   }
 }
 
-// .collapse{
-//    display: flex;
-//   width: 100%;
-// 	margin: 20px 0;
-//    justify-content: center;
-//    align-items: center;
-// }
-// .accordion {
-//     width: 500px;
-// }
-// .item {
-//     background: #f0ebf0;
-//     margin-bottom: 5px;
-//     padding: 10px 20px;
-// }
-// .title {
-//     color: #856685;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-// }
-// .content{
-//     color: #8b7f75;
 
-// }
