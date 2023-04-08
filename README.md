@@ -13,16 +13,25 @@ voila [ce fichier JSON](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/
 
 ### Cahiers des charges
 #### Spécifications fonctionnelles:
-1. Page d'accueil listant les différents logements
-2. Page de logement avec leur(s) description complète
-3. Page à propos contenant différentes informations
-4. Page d'erreur 404 si la route n'existe pas
-5. Design responsive.
+Quelques précisions sur les fonctionnalités du site :
+
+1. Pour le défilement des photos dans la galerie (composant Gallery) :
+* Si l'utilisateur se trouve à la première image et qu'il clique sur "Image précédente", la galerie affiche la dernière image. 
+* Inversement, quand l'image affichée est la dernière de la galerie, si l'utilisateur clique sur "Image suivante", la galerie affiche la première image. 
+* S'il n'y a qu'une seule image, les boutons "Suivant" et "Précédent" n'apparaissent pas.
+2. La galerie doit toujours rester de la même hauteur, celle indiquée sur la maquette Figma. Les images seront donc coupées et centrées dans le cadre de l’image.
+3. Collapse : Par défaut, les Collapses sont fermés à l'initialisation de la page. 
+4. Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
+Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
 #### Spécifications techniques
 1. Découper en composants modulaires et réutilisables
 2. Structure logique des fichiers
 3. Utilisations des évènements
 4. Utiliser les listes en itérant dessus
+5. Utilisation des props entre les composants
+6. La page 404 est renvoyée pour chaque route inexistante, ou si une
+valeur présente dans l’URL ne fait pas partie des données
+renseignées
 
 ### Langages utilisés :
 HTML5 / CSS3 / SASS / JavaScript / React
