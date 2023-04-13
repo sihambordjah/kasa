@@ -1,25 +1,33 @@
-//import React, { useState } from "react";
-import Accordion from "./Accordion";
+import React, { useState } from "react";
 
-import CollapseData from "../../datas/collapses.json";
+const Accordion = ({ title, content }) => {
+  //declaration du state en utilisant le Hook useState()
+  const [isOpen, setIsOpen] = useState(false); // je definie le state du toggle (et false par défaut)
 
-function Collapse() {
+  //fonction pour gérer l'afichage du contenu des collapses
+  const display = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <>
-      <div className="collapse">
-        <div className="collapse__dropdown">
-          {CollapseData.map((item) => {
-            return (
-              <div key={item.id}>
-                <Accordion {...item} />
-                {/* <Accordion content={item.content} title={item.title} /> */}
-              </div>
-            );
-          })}
-        </div>
+    // affiche le collapse replié par défaut et l'ouvre au clic puis le referme au clic en faisant disparaitre le texte et le style
+    <div className="collapse__dropdown__container">
+      <div className="collapse__dropdown__title">
+        <h2>{title}</h2>
+        <p onClick={display}>
+          {isOpen ? (
+            <i className="fa-solid fa-chevron-up"></i>
+          ) : (
+            <i className="fa-solid fa-chevron-down"></i>
+          )}
+        </p>
       </div>
-    </>
+      {/* Si le collapse est à TRUE alors il affichera la description */}
+      <div className="collapse__dropdown__content">
+        {isOpen && <p>{content}</p>}
+      </div>
+    </div>
   );
-}
+};
 
-export default Collapse;
+export default Accordion;
