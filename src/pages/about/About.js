@@ -1,16 +1,18 @@
 import React from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import AboutBanner from "../../components/banner/AboutBanner";
+import Banner from "../../components/banner/Banner";
+import imgBannerAbout from "../../assets/images/banner/aboutBanner.png";
 import Collapse from "../../components/collapse/Collapse";
 import CollapseData from "../../datas/collapses.json";
+
 
 const About = () => {
   return (
     <div className="about">
       <Header />
       <main>
-        <AboutBanner />
+        <Banner image={imgBannerAbout} titre="" />
 
         <div className="collapse">
           <div className="collapse__dropdown">
