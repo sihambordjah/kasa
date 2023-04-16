@@ -2,16 +2,15 @@
 import { useParams, Navigate } from "react-router-dom";
 import DataFichLogement from "../../datas/logement.json";
 import Tag from "./Tag";
-import emptyStar from "../../assets/images/rate/startRempli.png";
-import fullStar from "../../assets/images/rate/startVide.png";
-import Collapse from "../collapse/Accordion";
+import Collapse from "../collapse/Collapse";
 import Carrousel from "./Carrousel";
+import Rate from "./Rate";
+import Host from "./Host";
 
 const FicheLogementDisplay = () => {
   /* Récupère la bonne fiche */
   const { id } = useParams();
-  console.log("-----id params");
-  console.log(id);
+
   const ficheLogement = DataFichLogement.find((logement) => logement.id === id);
 
   /* Tags */
@@ -19,78 +18,51 @@ const FicheLogementDisplay = () => {
     return <Tag key={i} nom={tags} />;
   });
 
-  /* Notes */
-  let noteLogement = [];
-  let etoileComplete = true;
-  for (let index = 0; index < 5; index++) {
-    if (index === parseInt(ficheLogement?.rating)) {
-      etoileComplete = false;
-    }
-    if (etoileComplete === true) {
-      noteLogement.push(
-        <img
-          key={index}
-          className="etoile"
-          src={emptyStar}
-          alt={`${ficheLogement?.rating}/5`}
-        />
-      );
-    } else {
-      noteLogement.push(
-        <img
-          key={index}
-          className="etoile"
-          src={fullStar}
-          alt={`${ficheLogement?.rating}/5`}
-        />
-      );
-    }
-  }
-
   /* Équipements */
-  const equipementsLogement = ficheLogement?.equipments.map(
-    (equipment, index) => {
-      return <li key={index}>{equipment}</li>;
-    }
-  );
+  const equipements = ficheLogement?.equipments.map((equipment, i) => {
+    return (
+      <ul key={i}>
+        <li>{equipment}</li>
+      </ul>
+    );
+  });
 
   return (
     <>
       {ficheLogement ? (
         <div className="Fiche-container">
-          <Carrousel slides={ficheLogement.pictures} />
+          <Carrousel slides={ficheLogement?.pictures} />
           <section className="Fiche-logement">
             <div className="description-info">
               <div className="description-info__titletags">
                 <div className="description-info__titletags__title">
-                  <span className="titre-logement">{ficheLogement.title}</span>
+                  <span className="titre-logement">{ficheLogement?.title}</span>
                   <span className="endroit-logement">
                     {ficheLogement?.location}
                   </span>
                 </div>
+                {/* Tags */}
                 <div className="description-info__titletags__tags">
                   {tagsLogement}
                 </div>
               </div>
 
               <div className="description-info__proprietaire">
+                {/* Hosting */}
                 <div className="description-info__proprietaire__nom-prop">
-                  <span className="nom-proprietaire">
-                    {ficheLogement?.host.name}
-                  </span>
-                  <img
-                    className="photo-proprietaire"
-                    src={ficheLogement?.host.picture}
-                    alt="Propriétaire"
+                  <Host
+                    name={ficheLogement?.host.name}
+                    picture={ficheLogement?.host.picture}
                   />
                 </div>
+                {/* Rating */}
                 <div className="description-info__proprietaire__rate">
-                  {noteLogement}
+                  <Rate score={ficheLogement.rating} />
                 </div>
               </div>
             </div>
           </section>
-
+          {/* Collapse */}
           <div className="description-centent">
             <div className="description-centent__description">
               <Collapse
@@ -99,7 +71,7 @@ const FicheLogementDisplay = () => {
               />
             </div>
             <div className="description-centent__equipement">
-              <Collapse title="Équipements" content={equipementsLogement} />
+              <Collapse title="Équipements" content={equipements} />
             </div>
           </div>
         </div>

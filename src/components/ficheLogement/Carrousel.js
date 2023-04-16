@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-//import flechLeft from "../../assets/images/carrousel/flech-left.png";
-//import flechRight from "../../assets/images/carrousel/flech-right.png";
 
 function Carrousel({ slides }) {
   /* Crée un Hook d'état */
@@ -8,26 +6,26 @@ function Carrousel({ slides }) {
   const length = slides.length; //longueur du tableau de slides
 
   /**Function pour l'image precedente */
-  const nextImg = () => {
+  const nextImage = () => {
     setCurrent(current === length - 1 ? 0 : current + 1); // on repart au premier slide quand on arrive au dernier
   };
   /**Function pour l'image suivante */
-  const prevImg = () => {
+  const prevImage = () => {
     setCurrent(current === 0 ? length - 1 : current - 1); // on repart au dernier slide quand on est au premier
   };
-  console.log(current);
+
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
   return (
     <section className="slide">
       {length > 1 && (
-        <p className="left-Arrow" onClick={prevImg}>
+        <p className="left-Arrow" onClick={prevImage}>
           <i className="fa-solid fa-chevron-left"></i>
         </p>
       )}
       {length > 1 && (
-        <p className="right-Arrow" onClick={nextImg}>
+        <p className="right-Arrow" onClick={nextImage}>
           <i className="fa-solid fa-chevron-right"></i>
         </p>
       )}

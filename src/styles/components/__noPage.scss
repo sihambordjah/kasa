@@ -26,7 +26,6 @@
   }
   &__Link {
     @extend %flex-end;
-    //text-decoration: none;
     color: $primary-color;
     @include font(14px, 500);
     margin: 3rem 0 2rem 0;
