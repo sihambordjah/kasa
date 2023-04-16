@@ -6,7 +6,6 @@ import imgBannerAbout from "../../assets/images/banner/aboutBanner.png";
 import Collapse from "../../components/collapse/Collapse";
 import CollapseData from "../../datas/collapses.json";
 
-
 const About = () => {
   return (
     <div className="about">
